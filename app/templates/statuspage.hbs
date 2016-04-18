@@ -1,4 +1,4 @@
-<h2>{{model.name}} Status Page </h2>
+<h3>{{model.name}} Services</h3>
 
 <div class="row">
   {{#each model.services as |service|}}
@@ -14,10 +14,10 @@
         <p> This is where the Current Status will go </p>
       </div>
 
-      <div class="panel-footer text-right">
+      <div class="panel-footer text-center">
         <button class="btn btn-success">Good</button>
-        <button class="btn btn-warning">Ok</button>
-        <button class="btn btn-danger">Bad</button>
+        <button class="btn btn-warning">Degraded</button>
+        <button class="btn btn-danger">Outage</button>
       </div>
     </div>
 

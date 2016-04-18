@@ -5,5 +5,7 @@
 }
 
 .panel-footer > .btn {
-  width: 32%;
+  width: 29%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
