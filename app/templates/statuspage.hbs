@@ -1,3 +1,14 @@
 <h2>{{model.name}} Status Page </h2>
 
-{{outlet}}
+<div class="row">
+  <h2> Your Services: </h2>
+  {{#each model.services as |service|}}
+  <ul>
+    <li>
+    <div class="col-xs-6">
+        {{service.description}}
+    </div>
+    </li>
+  </ul>
+  {{/each}}
+</div>
