@@ -6,6 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('login');
+  this.route('statuspages', function() {});
+  this.route('statuspage', { path: '/statuspages/:statuspage_id'});
 });
 
 export default Router;

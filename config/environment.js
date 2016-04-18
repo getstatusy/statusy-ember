@@ -19,12 +19,29 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-simple-auth'] = {
+    authorizer: 'authorizer:token',
+  };
+
+  ENV['ember-simple-auth-token'] = {
+    serverTokenEndpoint: 'http://localhost:8000/api/v1/auth',
+    identificationField: 'email',
+    passwordField: 'password',
+    tokenPropertyName: 'access_token',
+    authorizationPrefix: 'JWT ',
+    authorizationHeaderName: 'Authorization',
+    headers: {},
+    timeFactor: 1000,
+    refreshAccessTokens: false,
+    tokenExpireName: 'exp'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {

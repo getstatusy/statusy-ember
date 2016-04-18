@@ -1,0 +1,10 @@
+<div class="row">
+  {{#each model as |statuspage|}}
+    <div class="col-xs-6">
+      {{#link-to 'statuspage' statuspage
+        class="statuspage btn btn-lg btn-default"}}
+        {{statuspage.name}}
+      {{/link-to}}
+    </div>
+  {{/each}}
+</div>
